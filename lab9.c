@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // RecordType
 typedef struct RecordType
@@ -12,13 +13,21 @@ typedef struct RecordType
 typedef struct HashType
 {
 	RecordType* ptr;
-	HashType* next;
+	struct HashType* next;
 
 } HashType;
 
 // Compute the hash function
 int hash(int x)
 {
+	HashType *newNode = malloc(sizeof(HashType));
+	newNode->ptr;
+	newNode->next = NULL;
+
+	//hash key
+	int key = x % 31;
+
+	
 
 }
 
